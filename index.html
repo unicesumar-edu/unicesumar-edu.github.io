@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="ico.png">
+    <title>Carteirinha de Estudante - UniCesumar</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href=".studeo-regular.ttf">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+      <section id="logo">
+        <img src="./mnt/data/logo.webp" alt="logo">
+      </section>  
+      <h1 id="titulo">Gerar Carteirinha de Estudante</h1>
+        <form id="studentForm">
+            <label for="name"></label>
+            <input type="text" id="name" placeholder="Nome" required>
+            <label for="course"></label>
+            <input type="text" id="course" placeholder="Curso" required>
+            <label for="ra"></label>
+            <input type="number" id="ra" placeholder="RA" required>
+            <label for="cpf"></label>
+            <input type="number" id="cpf" placeholder="CPF" required>
+            <label for="rg"></label>
+            <input type="number" id="rg" placeholder="RG" required>
+            <label for="birthdate"></label>
+            <input type="text" id="cardBirthdate" 
+            placeholder="Data de nascimento"
+            autocomplete="off"
+            onfocus="this.type='date'"
+            onblur="if(!this.value) this.type='text'" required>
+            <button type="submit">Gerar Carteirinha</button>
+        </form>
+
+        <div id="card">
+            <div class="front">
+                <h2>CARTEIRA DE IDENTIFICAÇÃO ESTUDANTIL</h2>
+                <p id="name">Nome</p>
+                <p id="cardName"></p>
+                <p> </p>
+                <p id="p-institution">Instituição de Ensino</p>
+                <p>UniCesumar</p>
+                <p id="cardCourse"></p>
+                <p>RA:</strong> <strong id="cardRA"></strong></p>
+                <p>CPF: <span id="cardCPF"></span></p>
+                <p>RG: <span id="cardRG"></span></p>
+                <p>Data de Nascimento: <span id="cardBD"></span></p>
+                <p>Validade: <span id="cardValidad">Até dezembro de 2024</span></p>
+                
+            </div>
+    </div>
+    <p class="small no-margin pull-left sm-pull-reset"> <span class="hint-text">© </span> <span class="ng-binding">2024</span> <span class="font-montserrat">UNICESUMAR</span><span class="hint-text">. Todos os direitos reservados.</span> </p>
+    <div id="divButton">
+    <button id="printButton" onclick="window.print()" style="display: none;">
+        <i class="fa fa-print"></i> Imprimir
+    </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
